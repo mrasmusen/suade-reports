@@ -45,7 +45,6 @@ class ReportsResource():
 
         pdfkit.from_string(html, pdfout)
                                        
-        # return (pdfout, 200, {"Content-Type": "application/pdf", "Content-Disposition": "inline;filename=" + pdffilename})
         return send_file(pdfout)
       
     except NoDatabaseError:
