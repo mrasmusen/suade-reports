@@ -41,3 +41,15 @@ class ResourceNotFoundError(Exception):
 """
 class MalformedDataError(Exception):
   pass
+
+"""
+  For when the user has input incorrect parameters
+"""
+class BadRequestError(Exception):
+  pass
+
+"""
+  Duplicate data - TODO handle duplicates.
+"""
+class DuplicateDataError(Exception):
+  pass

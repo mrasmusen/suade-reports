@@ -1,10 +1,12 @@
 from flask import Flask, request, Response
 from database.test_database import TestDatabase
+from database.psql_database import PostgresDatabase
 from resources.reports_resource import ReportsResource
 
 app = Flask(__name__)
 
-db = TestDatabase()
+# db = TestDatabase()
+db = PostgresDatabase("interview", "uo4uu3AeF3")
 reports_resource = ReportsResource(db)
 
 """
