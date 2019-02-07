@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <!-- TODO: some css -->
+  </head>
+  <body>
+    <h1>The Report</h1>
+    <p>Organisation name: {{ org_name }}</p>
+    <p>Reported: {{ reported_time }}</p>
+    <p>Created: {{ created_time }}</p>
+    <ul>
+      {% for item in inventory %}
+        <li> {{ item["name"] }} : {{ item["price"] }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
